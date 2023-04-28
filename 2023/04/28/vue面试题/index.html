@@ -18,17 +18,17 @@
   <link 
     rel="icon" 
     href="/">
-  <title>标签</title>
+  <title>Vue面试题</title>
   
     
       <meta 
         property="og:title" 
-        content="标签">
+        content="Vue面试题">
     
     
       <meta 
         property="og:url" 
-        content="http://example.com/tags/index.html">
+        content="http://example.com/2023/04/28/vue%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
     
     
       <meta 
@@ -36,6 +36,22 @@
         content="https://img1.baidu.com/it/u=1403245892,3051757811&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=500">
     
     
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-04-28">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-04-28">
+      <meta 
+        property="og:article:author" 
+        content="王喆">
+      
+        
+      
     
   
   
@@ -52,6 +68,8 @@
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
   
   
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
   
   <script>
     function loadScript(url, cb) {
@@ -285,6 +303,18 @@
                <div class="sticky-tablet">
   
   
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#v-show-%E5%92%8C-v-if-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">v-show 和 v-if 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BD%95-v-for-%E4%B8%AD%E8%A6%81%E7%94%A8-key"><span class="toc-text">为何 v-for 中要用 key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-Vue-%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%E6%9C%89%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">描述 Vue 组件生命周期(有父子组件的情况)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-%E7%BB%84%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%9A%E8%AE%AF"><span class="toc-text">Vue 组件如何通讯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0%E7%BB%84%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E6%9B%B4%E6%96%B0%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-text">描述组件渲染和更新的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A-v-model-%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-text">双向数据绑定 v-model 的实现原理</span></a></li></ol>
+      </div>
+    </article>
+  
   
   <article class="card card-content categories-widget">
     <div class="categories-card">
@@ -315,91 +345,134 @@
   </article>
   
   
-    <article class="card card-content widescreen-archive archive-widget">
-      <div class="archive-card">
-  <div class="archive-card-header">
-    <i 
-      class="iconfont icon-wodebaobiao" 
-      style="padding-right: 2px;">
-    </i>归档
-  </div>
-  <div class="archive-card-list">
-    
-    
-    
-      
-        
-        
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-    
-      <a 
-        href="/archives/2023" 
-        class="archive-card-list-item">
-        2023
-        <span class="archive-card-list-item-badge">8</span>
-      </a>
-    
-  </div>
-</div>
-    </article>
-  
 </div>
             </aside>
             <main class="main-column">
               
-
-<div class="card card-content">
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      Vue面试题
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-04-28T06:30:16.786Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-04-28</span>
+    </time>
+    
+    
+      <span class="dot"></span>
+      <span>152 字</span>
+    
+  </div>
+  
+  </header>
   <div 
-    class="tags-page-title" 
-    style="margin-bottom: 0.6rem">
-    标签
+    id="section" 
+    class="post-content">
+    <h2 id="v-show-和-v-if-的区别"><a href="#v-show-和-v-if-的区别" class="headerlink" title="v-show 和 v-if 的区别"></a>v-show 和 v-if 的区别</h2><pre class="highlight"><span class="line">两者都是判断类型都是布尔值</span><br><span class="line">v-if</span><br><span class="line">如果为真显示</span><br><span class="line">如果为假删除，不会在页面渲染</span><br><span class="line">v-show</span><br><span class="line">如果为真显示</span><br><span class="line">如果为假用display：none控制隐藏但还是会在页面渲染</span><br></pre>
+
+<pre class="highlight"><span class="line">总结:切换的频繁的话用v-show，如果不频繁就一次性的话用v-if</span><br></pre>
+
+<h2 id="为何-v-for-中要用-key"><a href="#为何-v-for-中要用-key" class="headerlink" title="为何 v-for 中要用 key"></a>为何 v-for 中要用 key</h2><pre class="highlight"><span class="line"></span><br></pre>
+
+<h2 id="描述-Vue-组件生命周期-有父子组件的情况"><a href="#描述-Vue-组件生命周期-有父子组件的情况" class="headerlink" title="描述 Vue 组件生命周期(有父子组件的情况)"></a>描述 Vue 组件生命周期(有父子组件的情况)</h2><pre class="highlight"><span class="line"></span><br></pre>
+
+<h2 id="Vue-组件如何通讯"><a href="#Vue-组件如何通讯" class="headerlink" title="Vue 组件如何通讯"></a>Vue 组件如何通讯</h2><pre class="highlight"><span class="line"></span><br></pre>
+
+<h2 id="描述组件渲染和更新的过程"><a href="#描述组件渲染和更新的过程" class="headerlink" title="描述组件渲染和更新的过程"></a>描述组件渲染和更新的过程</h2><pre class="highlight"><span class="line"></span><br></pre>
+
+<h2 id="双向数据绑定-v-model-的实现原理"><a href="#双向数据绑定-v-model-的实现原理" class="headerlink" title="双向数据绑定 v-model 的实现原理"></a>双向数据绑定 v-model 的实现原理</h2><pre class="highlight"><span class="line"></span><br></pre>
+
   </div>
   <div>
-    共计&nbsp;0&nbsp;个标签
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            王喆
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="http://example.com/2023/04/28/vue%E9%9D%A2%E8%AF%95%E9%A2%98/">
+            http://example.com/2023/04/28/vue%E9%9D%A2%E8%AF%95%E9%A2%98/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+      </div>
+    
   </div>
-</div>
-<div class="card card-content">
-  <div class="tags-card">
-    <div class="tags-list">
-      
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/04/28/react%E9%9D%A2%E8%AF%95%E9%A2%98/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">React面试题 </div>
+          
+        </div>
+      </a>
     </div>
-  </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/04/26/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">王喆的个人简历 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
 </div>
 
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#v-show-%E5%92%8C-v-if-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">v-show 和 v-if 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BD%95-v-for-%E4%B8%AD%E8%A6%81%E7%94%A8-key"><span class="toc-text">为何 v-for 中要用 key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-Vue-%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%E6%9C%89%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">描述 Vue 组件生命周期(有父子组件的情况)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-%E7%BB%84%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%9A%E8%AE%AF"><span class="toc-text">Vue 组件如何通讯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0%E7%BB%84%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E6%9B%B4%E6%96%B0%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-text">描述组件渲染和更新的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A-v-model-%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-text">双向数据绑定 v-model 的实现原理</span></a></li></ol>
+</div>
             </main>
             <aside class="right-column">
               <div class="sticky-widescreen">
   
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#v-show-%E5%92%8C-v-if-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">v-show 和 v-if 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BD%95-v-for-%E4%B8%AD%E8%A6%81%E7%94%A8-key"><span class="toc-text">为何 v-for 中要用 key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-Vue-%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%E6%9C%89%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">描述 Vue 组件生命周期(有父子组件的情况)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-%E7%BB%84%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%9A%E8%AE%AF"><span class="toc-text">Vue 组件如何通讯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0%E7%BB%84%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E6%9B%B4%E6%96%B0%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-text">描述组件渲染和更新的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A-v-model-%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-text">双向数据绑定 v-model 的实现原理</span></a></li></ol>
+    </article>
   
   
   <article class="card card-content">
@@ -436,64 +509,6 @@
 </div>
   </article>
   
-  
-    <article class="card card-content">
-      <div class="archive-card">
-  <div class="archive-card-header">
-    <i 
-      class="iconfont icon-wodebaobiao" 
-      style="padding-right: 2px;">
-    </i>归档
-  </div>
-  <div class="archive-card-list">
-    
-    
-    
-      
-        
-        
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        
-      
-    
-    
-      <a 
-        href="/archives/2023" 
-        class="archive-card-list-item">
-        2023
-        <span class="archive-card-list-item-badge">8</span>
-      </a>
-    
-  </div>
-</div>
-    </article>
   
 </div>
             </aside>
@@ -596,6 +611,36 @@
 </a> 
      
      
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
      
      
     <script src="/js/main.js"></script> 

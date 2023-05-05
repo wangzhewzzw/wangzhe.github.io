@@ -45,7 +45,7 @@
         content="2023-04-25">
       <meta 
         property="og:article:modified_time" 
-        content="2023-04-26">
+        content="2023-05-05">
       <meta 
         property="og:article:author" 
         content="王喆">
@@ -311,7 +311,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js-%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-text">js 的数据类型有哪些</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js-%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B-gt-6-3-x3D-gt-bigInt"><span class="toc-text">js 的数据类型有哪些 -&gt; 6 + 3 &#x3D;&gt; bigInt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue3-%E4%B8%AD-setup-%E5%9C%A8%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%A7%A6%E5%8F%91"><span class="toc-text">vue3 中 setup 在什么时候触发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-text"></span></a></li></ol>
       </div>
     </article>
   
@@ -366,7 +366,7 @@
     
     
       <span class="dot"></span>
-      <span>48 字</span>
+      <span>689 字</span>
     
   </div>
   
@@ -374,7 +374,15 @@
   <div 
     id="section" 
     class="post-content">
-    <h2 id="js-的数据类型有哪些"><a href="#js-的数据类型有哪些" class="headerlink" title="js 的数据类型有哪些"></a>js 的数据类型有哪些</h2><pre class="highlight"><span class="line">数据类型分为两种</span><br><span class="line"></span><br><span class="line">1.基本数据类型</span><br><span class="line">  基本数据类型包括(number,string,boolean,undefined,null,Es6新增(symbol))</span><br><span class="line">2.引用数据类型</span><br></pre>
+    <h2 id="js-的数据类型有哪些-gt-6-3-x3D-gt-bigInt"><a href="#js-的数据类型有哪些-gt-6-3-x3D-gt-bigInt" class="headerlink" title="js 的数据类型有哪些 -&gt; 6 + 3 &#x3D;&gt; bigInt"></a>js 的数据类型有哪些 -&gt; 6 + 3 &#x3D;&gt; bigInt</h2><pre class="highlight"><span class="line">数据类型分为两种</span><br><span class="line"></span><br><span class="line">1.基本数据类型</span><br><span class="line">  基本数据类型包括(number,string,boolean,undefined,null,Es6新增(symbol))</span><br><span class="line">2.引用数据类型</span><br><span class="line">  引用数据类型包括(<span class="keyword">function</span>,Object,Array)</span><br></pre>
+
+<pre class="highlight"><span class="line"><span class="title class_">BigInt</span> 是 <span class="title class_">ES2020</span> 中引入的一种新的数据类型，用于表示任意精度整数。它可以处理超过 <span class="title class_">Number</span> 类型所能表示的最大整数范围，从而解决了 <span class="title class_">JavaScript</span> 中某些数值计算的精度问题。</span><br><span class="line"></span><br><span class="line">在使用 <span class="title class_">BigInt</span> 时，我们需要在数字后面添加一个大写的 n 来标识它是一个 <span class="title class_">BigInt</span> 类型的值。例如：</span><br><span class="line"></span><br><span class="line">javascript</span><br><span class="line"><span class="keyword">const</span> bigNum = <span class="number">1234567890123456789012345678901234567890n</span>;</span><br><span class="line">需要注意的是，<span class="title class_">BigInt</span> 值不能与普通数字相加、相减等运算，必须显式地将其转换为 <span class="title class_">BigInt</span> 类型。以下是一些示例：</span><br><span class="line"></span><br><span class="line">javascript</span><br><span class="line"><span class="comment">// 将数字转换为 BigInt 类型</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="title class_">BigInt</span>(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 `n` 后缀声明 BigInt 类型</span></span><br><span class="line"><span class="keyword">const</span> b = <span class="number">12345n</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// BigInt 与 BigInt 运算</span></span><br><span class="line"><span class="keyword">const</span> c = a + b;</span><br><span class="line"></span><br><span class="line"><span class="comment">// BigInt 转换为普通数字</span></span><br><span class="line"><span class="keyword">const</span> d = <span class="title class_">Number</span>(c);</span><br><span class="line">由于 <span class="title class_">BigInt</span> 是一种新的数据类型，因此不是所有的浏览器和 <span class="title class_">JavaScript</span> 引擎都支持它。建议在使用之前，先检查浏览器或引擎是否支持该特性。</span><br><span class="line"></span><br><span class="line">总之，<span class="title class_">BigInt</span> 是一种非常有用的数据类型，可以帮助我们处理需要高精度计算的场景，如密码学、日期时间计算等。</span><br><span class="line"></span><br></pre>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><pre class="highlight"><span class="line"></span><br></pre>
+
+<h2 id="vue3-中-setup-在什么时候触发"><a href="#vue3-中-setup-在什么时候触发" class="headerlink" title="vue3 中 setup 在什么时候触发"></a>vue3 中 setup 在什么时候触发</h2><pre class="highlight"><span class="line">在 Vue 3 中，组件的 setup 函数是在组件实例创建之前执行的。具体来说，在组件被挂载到 DOM 上之前，Vue 会先执行 setup 函数，将 setup 函数返回的数据作为响应式对象注入到组件实例中，然后再开始执行组件的生命周期钩子函数。</span><br><span class="line"></span><br><span class="line">setup 函数的执行时机和 Vue 2 中的 beforeCreate 生命周期钩子类似，但有一些区别：</span><br><span class="line"></span><br><span class="line">setup 函数的参数包括了组件的 props、attrs、context 等属性，并且不能访问组件实例（即 this）；</span><br><span class="line">setup 函数中可以使用 Vue 3 提供的新 API，如 ref、reactive、computed 等，用于创建响应式数据；</span><br><span class="line">setup 函数需要返回一个对象，该对象中的属性和方法将被注入到组件实例中，可以在组件中通过 this.xxx 的方式进行访问。</span><br><span class="line">总之，在 Vue 3 中，setup 函数是一个非常重要的概念，它负责创建并初始化组件的状态，并将其注入到组件实例中。由于 setup 函数的执行时机很早，因此可以在其中进行一些预处理或者初始化操作，从而减少在组件生命周期钩子中的计算量，提高性能和效率。</span><br></pre>
+
+<h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><pre class="highlight"><span class="line"></span><br></pre>
 
   </div>
   <div>
@@ -445,7 +453,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js-%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-text">js 的数据类型有哪些</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js-%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B-gt-6-3-x3D-gt-bigInt"><span class="toc-text">js 的数据类型有哪些 -&gt; 6 + 3 &#x3D;&gt; bigInt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue3-%E4%B8%AD-setup-%E5%9C%A8%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%A7%A6%E5%8F%91"><span class="toc-text">vue3 中 setup 在什么时候触发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-text"></span></a></li></ol>
 </div>
             </main>
             <aside class="right-column">
@@ -459,7 +467,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js-%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-text">js 的数据类型有哪些</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js-%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B-gt-6-3-x3D-gt-bigInt"><span class="toc-text">js 的数据类型有哪些 -&gt; 6 + 3 &#x3D;&gt; bigInt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue3-%E4%B8%AD-setup-%E5%9C%A8%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%A7%A6%E5%8F%91"><span class="toc-text">vue3 中 setup 在什么时候触发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-text"></span></a></li></ol>
     </article>
   
   
